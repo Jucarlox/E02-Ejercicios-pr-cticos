@@ -19,9 +19,9 @@ public class Pais {
     @Id
     @GeneratedValue
     @NonNull
-    Long id;
+    private Long id;
     @NonNull
-    String nombre;
+    private String nombre;
 
 
 }

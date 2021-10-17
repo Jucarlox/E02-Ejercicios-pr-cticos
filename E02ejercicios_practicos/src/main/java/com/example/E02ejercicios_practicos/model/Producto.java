@@ -18,12 +18,12 @@ public class Producto {
     @Id
     @GeneratedValue
     @NonNull
-    Long id;
+    private Long id;
     @NonNull
-    String nombre;
+    private String nombre;
     @NonNull
-    Double precio;
-    String imagen;
-    String descripcion;
+    private Double precio;
+    private String imagen;
+    private String descripcion;
 
 }
