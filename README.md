@@ -1,1 +1,1 @@
-# E02-Ejercicios-pr-cticos
+# E02-Ejercicios-practicos
