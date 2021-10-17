@@ -1,29 +1,34 @@
 package com.example.E02ejercicios_practicos.model;
 
-import com.sun.istack.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import lombok.*;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+
+
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Producto {
+@Builder
+@Table(name = "product")
+public class Producto implements Serializable {
     @Id
-    @GeneratedValue
-    @NonNull
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
     private Long id;
     @NonNull
+    @Column(name = "name")
     private String nombre;
     @NonNull
+    @Column(name = "price")
     private Double precio;
+    @Column(name = "image")
     private String imagen;
+    @Column(name = "description")
     private String descripcion;
 
 }

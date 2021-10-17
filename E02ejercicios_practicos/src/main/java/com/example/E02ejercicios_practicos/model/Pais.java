@@ -1,26 +1,25 @@
 package com.example.E02ejercicios_practicos.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Pais {
+@Builder
+@Table(name = "country")
+public class Pais implements Serializable {
 
     @Id
-    @GeneratedValue
-    @NonNull
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
     private Long id;
     @NonNull
+    @Column(length = 128, name = "name")
     private String nombre;
 
 
