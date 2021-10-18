@@ -7,7 +7,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -19,7 +20,7 @@ public class Pais implements Serializable {
 
     private Long id;
 
-    @Column(length = 128, name = "name", nullable = true)
+    @Column(length = 128, name = "name", nullable = false)
     private String nombre;
 
 
