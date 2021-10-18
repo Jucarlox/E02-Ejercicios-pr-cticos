@@ -18,8 +18,8 @@ public class Pais implements Serializable {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 
     private Long id;
-    @NonNull
-    @Column(length = 128, name = "name")
+
+    @Column(length = 128, name = "name", nullable = true)
     private String nombre;
 
 

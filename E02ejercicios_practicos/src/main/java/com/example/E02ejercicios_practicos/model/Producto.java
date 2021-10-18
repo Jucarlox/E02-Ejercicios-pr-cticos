@@ -20,11 +20,10 @@ public class Producto implements Serializable {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 
     private Long id;
-    @NonNull
-    @Column(name = "name")
+    @Column(name = "name", nullable = true)
     private String nombre;
-    @NonNull
-    @Column(name = "price")
+
+    @Column(name = "price", nullable = true)
     private Double precio;
     @Column(name = "image")
     private String imagen;
